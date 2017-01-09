@@ -1,0 +1,48 @@
+<h1>People list</h1>
+
+<p>
+  {{link-to "New Person" "pessoas.new" }}
+</p>
+
+{{#if model.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Nome
+        </th>
+        <th>
+          Sobrenome
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |pessoa|}}
+        <tr>
+          <td>
+            {{pessoa.nome}}
+          </td>
+          <td>
+            {{pessoa.sobrenome}}
+          </td>
+          <td>
+            {{link-to "Edit" "pessoas.edit" pessoa}}
+          </td>
+          <td>
+            {{link-to "Show" "pessoas.show" pessoa}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" pessoa}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No People Found
+  </p>
+{{/if}}

@@ -18,6 +18,18 @@ Router.map(function() {
       path: ':telefone_id'
     });
   });
+  
+  this.route('pessoas', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':pessoas_id/edit'
+    });
+
+    this.route('show', {
+      path: ':telefone_id'
+    });
+  });
 });
 
 export default Router;

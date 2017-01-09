@@ -5,6 +5,12 @@ this.post('/telefones');
 this.del('/telefones/:id');
 this.put('/telefones/:id');
 
+this.get('/pessoas');
+this.get('/pessoas/:id');
+this.post('/pessoas');
+this.del('/pessoas/:id');
+this.put('/pessoas/:id');
+
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
